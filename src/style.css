@@ -38,11 +38,18 @@ header {
     gap: 20px;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 .header-branding {
     display: flex;
     align-items: center;
     gap: 12px;
     transition: transform 0.3s ease;
+    position: relative;
 }
 
 .header-branding:hover {
@@ -57,6 +64,17 @@ header {
 
 .logo-military:hover {
     transform: rotate(-5deg) scale(1.1);
+}
+
+.logo-secondary {
+    height: 48px;
+    width: auto;
+    transition: transform 0.4s ease;
+    margin-left: 12px;
+}
+
+.logo-secondary:hover {
+    transform: rotate(5deg) scale(1.1);
 }
 
 .header-branding h1 a {
@@ -494,6 +512,11 @@ footer {
         gap: 15px;
     }
     
+    .header-left {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
     .main-nav ul {
         flex-wrap: wrap;
         justify-content: center;
@@ -543,6 +566,10 @@ footer {
     .social-links {
         justify-content: center;
     }
+
+    .logo-secondary {
+        margin-left: 8px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -550,8 +577,13 @@ footer {
         font-size: 1.5rem;
     }
 
-    .logo-military {
+    .logo-military,
+    .logo-secondary {
         height: 40px;
+    }
+
+    .logo-secondary {
+        margin-left: 6px;
     }
 
     .nav-link {
